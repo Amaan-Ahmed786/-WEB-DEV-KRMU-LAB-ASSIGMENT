@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+const questions = [
+  "What gas do plants take in during photosynthesis?",
+  "Who was the first Prime Minister of India?",
+  "Which is the largest ocean in the world?",
+  "How many players are there in a cricket team?",
+  "What is the square root of 81?"
+];
+
+const answers = [
+  "Carbon dioxide",
+  "Jawaharlal Nehru",
+  "Pacific Ocean",
+  "11",
+  "9",
+];
+
+let score = 0; 
+for (let i = 0; i < questions.length; i++) {
+  let userAnswer = prompt(questions[i]); 
+
+  userAnswer = userAnswer.trim().toLowerCase();
+
+  if (userAnswer === answers[i]) {
+    alert("Correct");
+    score++; 
+  } else {
+    alert("Wrong. The correct answer is: " + answers[i]);
+  }
+}
+
+alert("Quiz Over\nYour Final Score is: " + score + " out of " + questions.length);
+</script>
+    
+</body>
+</html>
